@@ -1,13 +1,9 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+
+class Prueba extends BaseController
 {
 	public function index()
-	{
-		return view('welcome_message');
-	}
-
-	public function Peticion()
 	{
 		$options = array(
 			'cluster' => 'us2',
@@ -22,7 +18,7 @@ class Home extends BaseController
 		
 		  $data['message'] = 'hello world';
 		  $pusher->trigger('my-channel', 'my-event', $data);
-		return echo "Hola";
+		return "Hola";
 	}
 
 	//--------------------------------------------------------------------
